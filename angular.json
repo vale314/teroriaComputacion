@@ -23,9 +23,29 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./src/assets/sass/paper-kit.scss",
+              "./src/assets/css/demo.css",
+              "./src/assets/css/nucleo-icons.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.slim.min.js",
+              "./node_modules/popper.js/dist/umd/popper.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./src/assets/js/bootstrap-switch.min.js",
+              "./src/assets/js/nouislider.js",
+              "./src/assets/js/photo_swipe/photoswipe.min.js",
+              "./src/assets/js/photo_swipe/photoswipe-ui-default.min.js",
+              "./src/assets/js/photo_swipe/init-gallery.js",
+              "./src/assets/js/bootstrap-select.js",
+              "./src/assets/js/jasny-bootstrap.min.js",
+              "./src/assets/js/bootstrap-tagsinput.js",
+              "./src/assets/js/moment.min.js",
+              "./src/assets/js/bootstrap-datetimepicker.min.js",
+              "./src/assets/js/paper-kit.js",
+              "./src/assets/js/presentation-page/main.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -72,9 +92,29 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "styles.css"
+              "styles.css",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./src/assets/sass/paper-kit.scss",
+              "./src/assets/css/demo.css",
+              "./src/assets/css/nucleo-icons.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.slim.min.js",
+              "./node_modules/popper.js/dist/umd/popper.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./src/assets/js/bootstrap-switch.min.js",
+              "./src/assets/js/nouislider.js",
+              "./src/assets/js/photo_swipe/photoswipe.min.js",
+              "./src/assets/js/photo_swipe/photoswipe-ui-default.min.js",
+              "./src/assets/js/photo_swipe/init-gallery.js",
+              "./src/assets/js/bootstrap-select.js",
+              "./src/assets/js/jasny-bootstrap.min.js",
+              "./src/assets/js/bootstrap-tagsinput.js",
+              "./src/assets/js/moment.min.js",
+              "./src/assets/js/bootstrap-datetimepicker.min.js",
+              "./src/assets/js/paper-kit.js",
+              "./src/assets/js/presentation-page/main.js"
+            ],
             "assets": [
               "src/favicon.ico",
               "src/assets"
