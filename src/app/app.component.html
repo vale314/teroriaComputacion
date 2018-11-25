@@ -1,20 +1,81 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="header-2">
+  <nav class="navbar navbar-expand-lg navbar-transparent navbar-absolute">
+      <div class="container">
+          <a class="navbar-brand mb-0" href="">Music State</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-bar"></span>
+              <span class="navbar-toggler-bar"></span>
+              <span class="navbar-toggler-bar"></span>
+          </button>
 
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ml-auto">
+                  <a href="#paper-kit" class="btn btn-link btn-neutral">Docs</a>
+                  <a href="https://github.com/vale314" class="btn btn-link btn-neutral" target="_blank"> © Valentine_Alejandro</a>
+                  <a href="https://www.instagram.com/valentine_alejandro/" target="_blank" class="btn btn-link btn-neutral"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </ul>
+          </div>
+      </div>
+  </nav>
+
+  <div class="page-header" style="background-image: url('https://images.pexels.com/photos/713108/pexels-photo-713108.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');">
+      <div class="filter"></div>
+      
+      <div class="content-center">
+          <div class="container">
+              <div class="row">
+
+
+                  <div class="col-md-8 ml-auto mr-auto text-center" >
+
+
+
+                      <h1 class="title"> {{text}}</h1>
+                      <!--<h5 class="description">Now you have no excuses, it's time to surprise your clients, your competitors, and why not, the world. You probably won't have a better chance to show off all your potential if it's not by designing a website for your own agency or web studio.</h5>-->
+                      <br>
+
+                      
+                      <div style="background-color: #d9534f" class="alert alert-info"  [ngClass]="salir?'show ':'notShow'">
+                          <div class="container">
+                              <span>Error! </span>
+                          </div>
+                      </div>
+
+                      <div class="alert alert-info"  [ngClass]="end?'show ':'notShow'">
+                          <div class="container">
+                              <span>Excelente Disfruta Tu Cancion! </span>
+                          </div>
+                      </div>
+
+                  </div>
+
+                  
+
+
+                  <div class="col-md-10 ml-auto mr-auto">
+                      <div class="card card-raised card-form-horizontal no-transition">
+                          <div class="card-body">
+                              <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                                  <div class="row">
+                                      
+                                      <div class="col-md-9">
+                                          <div class="form-group">
+                                              <input type="text" value="" [attr.disabled]="salir||end?'':null" placeholder="Text" class="form-control" name="text" ngModel required #first="ngModel">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-3" *ngIf="!(salir||end)">
+                                          <button type="submit"  class="btn btn-danger btn-block"><i class="nc-icon nc-zoom-split"></i> &nbsp; Search
+                                      </button></div>
+                                      <div class="col-md-3" *ngIf="salir||end">
+                                          <button (click)="reset()" type="reset" class="btn btn-danger btn-block"><i class="nc-icon nc-zoom-split"></i> &nbsp; Reiniciar
+                                      </button></div>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
