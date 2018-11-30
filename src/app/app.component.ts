@@ -18,6 +18,7 @@ export class AppComponent {
   end
   text:string
   url:string
+  isCollapsed:boolean
   
 
 
@@ -29,6 +30,7 @@ export class AppComponent {
     this.end=false
     this.text=this.eQuestion[this.estado]
     this.url=''
+    this.isCollapsed=true
   }
 
   reset(){
