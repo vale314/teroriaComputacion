@@ -2,8 +2,9 @@
   "name": "web",
   "version": "0.0.0",
   "scripts": {
+    
     "ng": "ng",
-    "start": "ng serve",
+    "postinstall": "ng build --prod",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
