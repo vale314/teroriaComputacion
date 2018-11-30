@@ -17,7 +17,7 @@ app.get('*',(req,res)=>{
     res.redirect('/');
 })
 
-app.listen(800,'192.168.1.76' ,()=>{
+app.listen(process.env.PORT || 8080 ,()=>{
     console.log("Server Is Running");
 })
 
